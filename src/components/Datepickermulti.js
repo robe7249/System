@@ -2,6 +2,9 @@
 import React, { useState } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
+import moment from 'moment'
+
+
 
 export default function Datepicerkmulti() {
 
@@ -9,36 +12,36 @@ export default function Datepicerkmulti() {
     // const [endDate, setEndDate] = useState(new Date());
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
+
     const onChange = (dates) => {
         const [start, end] = dates;
         setStartDate(start);
         setEndDate(end);
     };
 
+    //Validation date not null 
     if (startDate && endDate !== null) {
-        comparateDates()
+        sameMonthandYear()
     }
+    //Diferences 
+    function sameMonthandYear() {
 
-    function comparateDates() {
-        const yearStart = startDate.getFullYear(null)
-        const yearEnd = endDate.getFullYear(null)
-        const monthStart = startDate.getMonth(null)
-        const monthEnd = endDate.getMonth(null)
-        const dayStart = startDate.getDate(null)
-        const dayEnd = endDate.getDate(null)
+        var correctStartDate = moment(startDate, 'YYYY');
+        var correctEndDate = moment(endDate, 'YYYY-MM-DD');
+        var diferenceDays = correctEndDate.diff(correctStartDate, 'days');
+        var NextMonth = moment(correctEndDate).isAfter(correctStartDate, 'months');
+        var StartDay = moment(correctStartDate).get('date')
+        var EndDay = moment(correctEndDate).get('date')
 
+        //Validate same month and create days array
+        if (diferenceDays <= 30 && NextMonth === false) {
+            var dates = [];
+            for (let i = StartDay; i <= EndDay; i++) {
+                dates = [i]
+                console.log(dates)
+            }
 
-        if (yearStart === yearEnd && monthStart === monthEnd) {
-            calculateCells(dayStart, dayEnd)
-        } else {
-            alert("El mes y año deben ser iguales")
         }
-    }
-
-
-    function calculateCells(dayStart, dayEnd) {
-        const totalCells = (dayEnd - dayStart) + 1
-        console.log(totalCells)
     }
 
     return (
@@ -46,10 +49,10 @@ export default function Datepicerkmulti() {
             <DatePicker
                 selected={startDate}
                 onChange={onChange}
+                dateFormat="dd//MM/yyyy"
                 startDate={startDate}
                 endDate={endDate}
                 selectsRange
-                dateFormat='dd/MM/yyyy'
                 isClearable
             />
         </div>
