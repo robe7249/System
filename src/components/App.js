@@ -2,19 +2,21 @@ import React from 'react';
 import Datepickmulti from './Datepickermulti';
 import Tables from './Tables'
 import Test from './Test'
+import Maintitle from './Maintitle';
+import Logo from './Logo';
+import Headinfo from './Headinfo'
+
 
 function App() {
 
   return (
     <div >
-      <Test />
-      <br></br>
-      <br></br>
-      <br></br>
+      <Logo />
+      <Maintitle />
+      <Headinfo />
       <Datepickmulti />
-      <br></br>
-      <br></br>
       <Tables />
+      {/* <Test /> */}
     </div>
   );
 }

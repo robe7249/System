@@ -46,6 +46,7 @@ export default function Datepicerkmulti() {
 
     return (
         <div>
+            <h6>Seleccion de Fechas</h6>
             <DatePicker
                 selected={startDate}
                 onChange={onChange}

@@ -1,5 +1,7 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table'
+import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
 
 
 export default function Tables() {
@@ -27,20 +29,45 @@ export default function Tables() {
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>Lunes</td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <td>Martes</td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td colSpan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                        <td>Miercoles</td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
+                        <td> <Form.Control size="sm" type="text" placeholder="" /> </td>
                     </tr>
                 </tbody>
             </Table>
